@@ -30,7 +30,7 @@
 #include "timer.h"
 #include "buttons.h"
 #include "gettext.h"
-#include "bl_check.h"
+//#include "bl_check.h"
 
 /* Screen timeout */
 uint32_t system_millis_lock_start;
@@ -91,7 +91,7 @@ int main(void)
 	__stack_chk_guard = random32(); // this supports compiler provided unpredictable stack protection checks
 	oledInit();
 #else
-	check_bootloader();
+//	check_bootloader();
 	setupApp();
 	__stack_chk_guard = random32(); // this supports compiler provided unpredictable stack protection checks
 #endif
